@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/text.css" />
+  </head>
+  <body>
+    <div class="bubble">
+      <svg class="heart" viewBox="0 0 600 500">
+        <path d="M300,150 C500,10 600,300 300,400 C0,300 100,10 300,150" />
+      </svg>
+      <div class="bubble-dummy"></div>
+    </div>
+    <div  class="my-text">
+      <div class="word-container"><div class="word">From</div></div>
+      <div class="word-container"><div class="word">Someone</div></div>
+      <div class="word-container"><div class="word">who</div></div>
+      <div class="word-container"><div class="word">has</div></div>
+      <div class="word-container"><div class="word">enjoyed</div></div>
+      <div class="word-container"><div class="word">every</div></div>
+      <div class="word-container"><div class="word">bit</div></div>
+      <div class="word-container"><div class="word">of</div></div>
+      <div class="word-container"><div class="word">time</div></div>
+      <div class="word-container"><div class="word">spent</div></div>
+      <div class="word-container"><div class="word">with</div></div>
+      <div class="word-container"><div class="word">you</div></div>
+    </div>
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      const myText = new SplitType("#text");
+      gsap.to(".word", {
+        y: 0,
+        stagger: 0.08,
+        delay: 1,
+        duration: 2,
+        opacity: 1,
+        onComplete: function() {
+          setTimeout(function() {
+            gsap.to("body", {
+              opacity: 0,
+              duration: 1,
+              onComplete: function() {
+                window.location.href = "card.html";
+              }
+            });
+          }, 2000); 
+        }
+      });
+    </script>
+    <script src="/js/text.js"></script>
+  </body>
+</html>

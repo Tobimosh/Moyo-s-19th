@@ -1,0 +1,49 @@
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 1000;
+    position: absolute; */
+    top: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+  }
+
+  .myButton {
+    background-color: #eb4fa4; 
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-size: 10px;
+    border-radius: 5px;
+    animation: shake 0.5s ease-in-out infinite alternate;
+    cursor: pointer;
+  }
+  
+  .myButton:hover{
+    animation: none;
+    transform: scale(1.1);
+    
+  }
+  
+  .myButton span {
+    margin-right: 5px;
+  }
+  
+  .buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  
+  /* .title{
+    display: flex;
+    padding-right: 1rem;
+  }
+  .date{
+    padding-right: 1rem;
+
+  }
+  . */
