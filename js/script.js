@@ -1,6 +1,4 @@
 // Text Animation
-
-
 // SVG HEART ANIMATION USING d3 and GSAP
 var paper = d3.select("#canvas");
 var wsvg = $("#canvas").width();
