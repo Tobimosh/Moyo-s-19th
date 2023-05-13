@@ -14,7 +14,7 @@
       </svg>
       <div class="bubble-dummy"></div>
     </div>
-    <div  class="my-text">
+    <div class="my-text">
       <div class="word-container"><div class="word">From</div></div>
       <div class="word-container"><div class="word">Someone</div></div>
       <div class="word-container"><div class="word">who</div></div>
@@ -45,17 +45,17 @@
         delay: 1,
         duration: 2,
         opacity: 1,
-        onComplete: function() {
-          setTimeout(function() {
+        onComplete: function () {
+          setTimeout(function () {
             gsap.to("body", {
               opacity: 0,
               duration: 1,
-              onComplete: function() {
-                window.location.href = "./card.html";
-              }
+              onComplete: function () {
+                window.location.href = "./components/card.html";
+              },
             });
-          }, 2000); 
-        }
+          }, 2000);
+        },
       });
     </script>
     <script src="./js/text.js"></script>
